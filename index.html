@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Learn jQuery</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Learn jQuery" />
+<link rel="stylesheet" href="stylesheet.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+
+<script src="jquery-3.3.1.min.js"></script>
+<script src="learn-jquery.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <div id="menu-button-container">
+      <i id="menu-button" class="fas fa-bars"></i>
+      <i id="btn-close-menu" class="fas fa-times"></i>
+    </div>
+    <div id="menu-container">
+      <div id="close-menu-area"></div>
+      <ul id="menu-list">
+        <li class='active-link'><a href="#jq-effects">Task 1: jQuery effects</a></li>
+        <li><a href="#jq-section-bg">Task 2: changing CSS styling</a></li>
+        <li><a href="#DOM-nodes">Task 3: adding and removing DOM nodes</a></li>
+        <li><a href="#jq-animate">Task 4: jQuery animate()</a></li>
+        <li><a href="#random-color">Task 5: random background color generator in Grid CSS layout</a></li>
+        <li><a href="#modal-image-gallery">Task 6: modal image gallery</a></li>
+        <li><a href="#slideshow-gallery">Task 7: slideshow image gallery</a></li>
+        <li><a href="#carousel-section">Task 8: carousel with jQuery</a></li>
+        <li><a href="#tab-section">Task 9: tab panels</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- main -->
+  <div id="main">
+    <!-- toggle answers section-->
+    <section  id="jq-effects" class="bg-light">
+      <div class="margin-3">
+        <h1>Learn jQuery</h1>
+        <h4>Task 1: jQuery effects: showing and hiding content.</h4>
+          <div class="question-and-answer">
+            <div class="question">
+              <p>What is jQuery?</p>
+            </div>
+            <div class="answer">
+              <p>jQuery is a JavaScript library. jQuery simplifies DOM modification and solves cross-browser problems.</p>
+            </div>
+          </div>
+          <div class="question-and-answer">
+            <div class="question">
+              <p>How to get DOM elements with jQuery?</p>
+            </div>
+            <div class="answer">
+              <p>To get a specific element use <code class="highlight-grey">$('selector')</code> method (equivalent to <code class="highlight-grey">jQuery('selector')</code>). <code class="highlight-grey">$()</code> searches through the DOM for elements that match the provided selector and returns a new jQuery object that references these elements.</p>
+            </div>
+          </div>
+          <div class="question-and-answer">
+            <div class="question">
+              <p>How to use <code class="highlight-grey">$(document).ready()</code> method?</p>
+            </div>
+            <div class="answer">
+              <p><code class="highlight-grey">.ready( handler )</code> method provides a way to execute JS code after the DOM is loaded. A <code class="highlight-grey">handler</code> is a function that will run only after the DOM is ready.</p>
+              <p>These equivalent syntaxes can be used:</p>
+              <ul>
+                <li><code class="highlight-grey">$( handler )</code></li>
+                <li><code class="highlight-grey">$( document ).ready( handler )</code></li>
+                <li><code class="highlight-grey">$().ready( handler )</code></li>
+              </ul>
+            </div>
+          </div>
+          <div class="question-and-answer">
+            <div class="question">
+              <p><code class="highlight-grey">this</code> with direct and delegated event handlers</p>
+            </div>
+            <div class="answer">
+              <p>For directly bound handlers <code class="highlight-grey">this</code> keyword is a reference to an element where handler was attached. Syntax for directly bound handlers: <code class="highlight-grey">$().on('event', handler)</code>.</p> 
+              <p>For delegated events <code class="highlight-grey">this</code> keyword is a reference to an element matching <code class="highlight-grey">'selector'</code>. Syntax for delegated events: <code class="highlight-grey">$().on('event', 'selector', handler)</code>.</p>
+            </div>
+          </div>
+      </div>
+    </section>
+    <!-- change class section -->
+    <section id="jq-section-bg" class="bg-dark">
+     <div class="margin-3">
+        <div>
+          <h4>Task 2: changing CSS styling.</h4>
+          <p id="jq-toggle-color">Click on this paragraph to toggle text color: black/red.</p>
+        </div>
+        <div>
+          <button id="jq-toggle-bg" type="button">Toggle background color</button>
+        </div>
+     </div>
+    </section>
+    <!-- adding and removing nodes section -->
+    <section id="DOM-nodes" class="bg-light">
+      <div class="margin-3">
+        <h4>Task 3: adding and removing DOM nodes.</h4>
+        <div>
+          <p>A simple ToDo list (without saving entries feature)</p>
+          <div>
+            <div>
+              <input type="text" name="newEntry" placeholder="Add new line here" id="new-entry" />
+              <input type="submit" value="Add" id="add-entry-button" />
+              <ul id="list">
+                <li>test</li>
+                <li>test</li>
+                <li>test</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- jQuery animate() -->
+    <section id="jq-animate" class="bg-dark">
+      <div class="margin-3">
+        <h4>Task 4: jQuery animate() examples.</h4>
+        <button class="animated-from-left">I am moving from left after reaching the viewport</button>
+      </div>
+    </section>
+    <!-- grid Not supported in IE -->
+    <section id="random-color" class="bg-light">
+      <div class="margin-3">
+        <h4>Task 5: random background color generator in Grid CSS layout.</h4>
+        <p>Click on the grid to change background color randomly.</p>
+        <div id="grid-container">
+          <div class="grid-container__item item-one"><p class="rgb-text"></p></div>
+          <div class="grid-container__item item-two"><p class="rgb-text"></p></div>
+          <div class="grid-container__item item-three"><p class="rgb-text"></p></div>
+          <div class="grid-container__item item-four"><p class="rgb-text"></p></div>
+          <div class="grid-container__item item-five"><p class="rgb-text"></p></div>
+          <div class="grid-container__item item-six"><p class="rgb-text"></p></div>
+          <div class="grid-container__item item-seven"><p class="rgb-text"></p></div>
+          <div class="grid-container__item item-eight"><p class="rgb-text"></p></div>
+          <div class="grid-container__item item-nine"><p class="rgb-text"></p></div>
+        </div>
+      </div>
+    </section>
+    <!-- modal image gallery, flexbox layout -->
+    <section id="modal-image-gallery" class="bg-dark">
+      <div class="margin-3">
+        <h4>Task 6: modal image gallery.</h4>
+        <p>Image gallery size is set relative to viewport. Photos have equal height and different width.</p>
+        <p>Image gallery is responsive.</p>
+        <p>Click on any image to open modal.</p>
+        <div id="modal" class="modal-hidden">
+          <div id="btn-close-modal">×</div>
+          <div id="modal-image-container">
+            <div id="modal-arrow-backwards">&lt;</div>
+            <div id="modal-image">
+              <img src="assets/wolf-62898_640.jpg" alt="wolf" class="image-active" id="first-image">
+              <img src="assets/hedgehog-3703244_640.jpg" alt="hedgehog">
+              <img src="assets/jay-548381_640.jpg" alt="bird">
+              <img src="assets/ara-3695678_640.jpg" alt="parrot">
+              <img src="assets/bird-1045954_640.jpg" alt="bird">
+              <img src="assets/fox-1883658_640.jpg" alt="fox">
+              <img src="assets/fox-715588_640.jpg" alt="fox">
+              <img src="assets/moose-70254_640.jpg" alt="moose">
+              <img src="assets/norway-1758183_640.jpg" alt="fox">
+              <img src="assets/parrot-2756488_640.jpg" alt="parrot">
+            </div>
+            <div id="modal-arrow-forwards">&gt;</div>    
+          </div>
+        </div>
+        <div id="img-gallery-container">
+          <div id="arrow-backwards">&lt;</div>
+          <div id="arrow-forwards">&gt;</div>
+          <div id="img-gallery">
+            <div class="img-gallery__item">
+              <img src="assets/wolf-62898_640.jpg" alt="wolf">
+            </div> 
+            <div class="img-gallery__item">
+              <img src="assets/hedgehog-3703244_640.jpg" alt="hedgehog">
+            </div>  
+            <div class="img-gallery__item">
+              <img src="assets/jay-548381_640.jpg" alt="bird">
+            </div>
+            <div class="img-gallery__item">
+              <img src="assets/ara-3695678_640.jpg" alt="parrot">
+            </div>
+            <div class="img-gallery__item">
+              <img src="assets/bird-1045954_640.jpg" alt="bird">
+            </div>
+            <div class="img-gallery__item">
+              <img src="assets/fox-1883658_640.jpg" alt="fox">
+            </div>
+            <div class="img-gallery__item">
+              <img src="assets/fox-715588_640.jpg" alt="fox">
+            </div> 
+            <div class="img-gallery__item">
+              <img src="assets/moose-70254_640.jpg" alt="moose">
+            </div> 
+            <div class="img-gallery__item">
+              <img src="assets/norway-1758183_640.jpg" alt="fox">
+            </div> 
+            <div class="img-gallery__item">
+              <img src="assets/parrot-2756488_640.jpg" alt="parrot">
+            </div> 
+          </div>
+        </div>
+      </div>      
+    </section>
+    <!-- slideshow image gallery -->
+    <section id="slideshow-gallery" class="bg-light">
+      <div class="margin-3">
+        <h4>Task 7: slideshow image gallery.</h4>
+        <p>Image gallery has fixed size. Photos have equal height and width.</p>
+        <p>Image gallery and images are responsive.</p>
+        <div id="slideshow">
+          <div id="slideshow__main-image">
+            <img src="assets/bird-1045954_640 resized.jpg" alt="" id="main-image" />
+          </div>
+          <div id="slideshow__gallery">
+            <div id="arrow-previous">&lt;</div>
+            <div id="arrow-next">&gt;</div>
+            <div id="slideshow__gallery__container">
+              <img src="assets/bird-1045954_640 resized.jpg" alt="bird" class="slideshow-image" />
+              <img src="assets/fox-1883658_640 resized.jpg" alt="fox" class="slideshow-image" />
+              <img src="assets/fox-715588_640 resized.jpg" alt="fox" class="slideshow-image" />
+              <img src="assets/hedgehog-3703244_640 resized.jpg" alt="hedgehog" class="slideshow-image" />
+              <img src="assets/jay-548381_640 resized.jpg" alt="bird" class="slideshow-image" />
+              <img src="assets/moose-70254_640 resized.jpg" alt="moose" class="slideshow-image" />
+              <img src="assets/norway-1758183_640 resized.jpg" alt="fox" class="slideshow-image" />
+              <img src="assets/parrot-2756488_640 resized.jpg" alt="parrot" class="slideshow-image" />
+              <img src="assets/parrots-3427188_640 resized.jpg" alt="parrot" class="slideshow-image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- carousel -->
+    <section id="carousel-section" class="bg-dark">
+      <div class="margin-3">
+        <h4>Task 8: carousel with jQuery.</h4>
+        <div id="carousel-container">
+          <div id="carousel-item-one" class="carousel-container__item carousel-item-active">
+            <img src="assets/bird-1045954_640 resized.jpg" alt="bird" />
+            <div class="carousel-image-info">
+              <p>Image under CC0 license.</p>
+              <p>Link to the <a href="https://pixabay.com/en/bird-wings-fluttering-nature-1045954/">image source</a>.</p>
+            </div>
+          </div>
+          <div id="carousel-item-two" class="carousel-container__item carousel-container__item--absolute">
+            <img src="assets/hedgehog-3703244_640 resized.jpg" alt="hedgehog" />
+            <div class="carousel-image-info">
+              <p>Image under CC0 license.</p>
+              <p>Link to the <a href="https://pixabay.com/en/hedgehog-animal-spur-nature-mammal-3703244/">image source</a>.</p>
+            </div>
+          </div>
+          <div id="carousel-item-three" class="carousel-container__item carousel-container__item--absolute">
+            <img src="assets/jay-548381_640 resized.jpg" alt="bird" />
+            <div class="carousel-image-info">
+              <p>Image under CC0 license.</p>
+              <p>Link to the <a href="https://pixabay.com/en/jay-bird-animal-perched-548381/">image source</a>.</p>
+            </div>
+          </div>
+          <div id="carousel-item-four" class="carousel-container__item carousel-container__item--absolute">
+            <img src="assets/moose-70254_640 resized.jpg" alt="moose" />
+            <div class="carousel-image-info">
+              <p>Image under CC0 license.</p>
+              <p>Link to the <a href="https://pixabay.com/en/moose-moose-rack-male-bull-animal-70254/">image source</a>.</p>
+            </div>
+          </div>
+          <div id="carousel-nav">
+            <div class="carousel-nav__item carousel-nav__item-active" data-item-id="carousel-item-one"></div>
+            <div class="carousel-nav__item" data-item-id="carousel-item-two"></div>
+            <div class="carousel-nav__item" data-item-id="carousel-item-three"></div>
+            <div class="carousel-nav__item" data-item-id="carousel-item-four"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- tab panels -->
+    <section id="tab-section" class="bg-light">
+      <div class="margin-3">
+        <h4>Task 9: tab panels.</h4>
+        <div id="tab-panels">
+          <h4>CSS width, height, max-width, margin and padding properties.</h4>
+          <ul id="panel-name-list">
+            <li class="panel-name-active" data-panel-id="panel-one">Width</li>
+            <li data-panel-id="panel-two">Height</li>
+            <li data-panel-id="panel-three">Margin</li>
+            <li data-panel-id="panel-four">Padding</li>
+          </ul>
+          <div id="panels-container">
+            <div id="panel-one" class="panel-active">
+              <p><b>Width auto for block-level elements</b></p>
+              <p>The initial width of a block-level element is auto. This makes it expand to fit the horizontal space of the <i>content area</i> of the containing block.</p>
+              <p><b>Width 100% for block-level elements</b></p>
+              <p>If the element's width is set to 100%, that means that the element's total width will be calculated as 100% of the containing block width plus all horizontal paddings, borders and margins (unless the box-sizing: border-box is set, in this case only margins will be added to the 100% value).</p>
+            </div>
+            <div id="panel-two">
+              <p>By default elements' margins do not affect the containing block size. This can be changed by adding padding or border to the containing block.</p>
+            </div>
+            <div id="panel-three">
+              <p>When margin is set to <b>auto</b> the browser calculates margin value.</p>
+              <p>When margin is set in <b>%</b> it specifies the margin in % of the containing block's <i>content area</i> width.</p>
+            </div>
+            <div id="panel-four">
+              <p>When padding is set in <b>%</b> it specifies the padding in % of the containing block's <i>content area</i> width.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- back to top button -->
+    <section>
+      <div id="btn-to-top">
+        <div id="btn-to-top__animated"><a href="#top">back to top</a></div>
+        <div id="btn-to-top__fixed"><a href="#top"><i class="fas fa-angle-up"></i></a></div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

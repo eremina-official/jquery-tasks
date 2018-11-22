@@ -22,7 +22,7 @@
     <div id="menu-container">
       <div id="close-menu-area"></div>
       <ul id="menu-list">
-        <li class='active-link'><a href="#jq-effects">Task 1: jQuery effects</a></li>
+        <li><a href="#jq-effects" class="active-link">Task 1: jQuery effects</a></li>
         <li><a href="#jq-section-bg">Task 2: changing CSS styling</a></li>
         <li><a href="#DOM-nodes">Task 3: adding and removing DOM nodes</a></li>
         <li><a href="#jq-animate">Task 4: jQuery animate()</a></li>
@@ -105,9 +105,7 @@
               <input type="text" name="newEntry" placeholder="Add new line here" id="new-entry" />
               <input type="submit" value="Add" id="add-entry-button" />
               <ul id="list">
-                <li>test</li>
-                <li>test</li>
-                <li>test</li>
+                <li>test entry<span class="remove-entry">×</span></li>
               </ul>
             </div>
           </div>
@@ -146,8 +144,9 @@
         <p>Image gallery size is set relative to viewport. Photos have equal height and different width.</p>
         <p>Image gallery is responsive.</p>
         <p>Click on any image to open modal.</p>
+        <p>Images under CC0 license.</p>
         <div id="modal" class="modal-hidden">
-          <div id="btn-close-modal">×</div>
+          <div id="container__btn-close-modal"><span id="btn-close-modal">×</span></div>
           <div id="modal-image-container">
             <div id="modal-arrow-backwards">&lt;</div>
             <div id="modal-image">
@@ -209,6 +208,7 @@
         <h4>Task 7: slideshow image gallery.</h4>
         <p>Image gallery has fixed size. Photos have equal height and width.</p>
         <p>Image gallery and images are responsive.</p>
+        <p>Images under CC0 license.</p>
         <div id="slideshow">
           <div id="slideshow__main-image">
             <img src="assets/bird-1045954_640 resized.jpg" alt="" id="main-image" />
@@ -293,7 +293,10 @@
               <p>If the element's width is set to 100%, that means that the element's total width will be calculated as 100% of the containing block width plus all horizontal paddings, borders and margins (unless the box-sizing: border-box is set, in this case only margins will be added to the 100% value).</p>
             </div>
             <div id="panel-two">
+              <p><b>Margins and element height</b></p>
               <p>By default elements' margins do not affect the containing block size. This can be changed by adding padding or border to the containing block.</p>
+              <p><b>Height auto for block-level elements</b></p>
+              <p>If the parent element does not have a height set, it's height has a default value auto. Then when for a child element the height is set to %, the browser should calculate height from an undefined value(auto). Since the result would be a null-value, browser does nothing with the height of child element.</p>
             </div>
             <div id="panel-three">
               <p>When margin is set to <b>auto</b> the browser calculates margin value.</p>

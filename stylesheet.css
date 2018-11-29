@@ -153,25 +153,33 @@ h1 {
   }
 
 /* question and answer section */
+#question-and-answer-container {
+  max-width: 700px;
+  border: 2px solid gray;
+  border-bottom: none;
+}
 .question-and-answer {
   font-size: 100%;
   line-height: 1.6;
+  border-bottom: 2px solid gray;
 }
-
 .question-and-answer ul {
   padding-inline-start: 1em;
   margin-inline-start: 1em; 
 }
-
+.question-and-answer p {
+  margin: 0;
+}
 .question {
   text-decoration: underline;
-  color: blue;
+  color: #428bca;
+  background-color: #eee;
+  padding: 12px 6px;
   cursor: pointer;
 }
-
 .answer {
   display: none;
-  margin-left: 5px;
+  padding: 20px 8px;
 }
 
 .highlight-grey {
@@ -187,10 +195,48 @@ h1 {
 }
 
 /* ToDo list */
+#todolist-container {
+  max-width: 700px;
+  border: 2px solid gray;
+}
+#todolist-input-container {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  height: 2.6em;
+  border-bottom: 2px solid gray;
+}
+#new-entry {
+  flex-grow: 1; /* so that the flex-item would take all available space */
+}
+#add-entry-button {
+  width: 60px;
+  cursor: pointer;
+}
 #list {
   list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
   padding-inline-start: 0;
   padding: 0; /* for IE and Edge */
+}
+#list li {
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+  padding: 6px;
+}
+#list li:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+.remove-entry {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 26px;
+  font-weight: bold;
+  color: black;
+  margin-left: auto;
+  margin-right: 0.2em;
+  cursor: pointer;
 }
 
 /* animation move from left when in viewport */
@@ -399,8 +445,10 @@ h1 {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
+  /* right: 0;
+  bottom: 0; */
   background-color: rgba( 0, 0, 0, .9 );
   z-index: 102;
 }
@@ -418,32 +466,30 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* width: 100%; */
+  width: 90vw;
   height: 70vh;
   max-height: 70vh;
-  margin: 1%;
+  margin: auto;
   /* border: 2px solid white; */
 }
 #modal-image {
   color: white;
   /* border: 2px solid white; */
-  position: relative;
-  width: 90vw;
-  height: auto;
-  max-width: 90vw;
+  /* position: relative; */
+  /* width: 90vw; */
+  height: 70vh;
+  /* max-width: 90vw; */
   max-height: 70vh;
 }
-#modal-image img {
+.modal-active img {
   display: none;
   /* max-height: 70vh; */
 }
-#modal-image img.image-active {
+img.image-active {
   display: inline-block;
-  position: absolute;
+  /* position: absolute; there is no need to position this elements, since all not active elements have display: none, they do not take any space in the page layout
   top: 0;
-  left: 0;
-  /* right: 0; */
-  /* bottom: 0; */
+  left: 0; */
   /* width: 100%; */
   height: auto;
   max-width: 100%;

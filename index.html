@@ -41,6 +41,7 @@
       <div class="margin-3">
         <h1>Learn jQuery</h1>
         <h4>Task 1: jQuery effects: showing and hiding content.</h4>
+        <div id="question-and-answer-container">
           <div class="question-and-answer">
             <div class="question">
               <p>What is jQuery?</p>
@@ -80,6 +81,7 @@
               <p>For delegated events <code class="highlight-grey">this</code> keyword is a reference to an element matching <code class="highlight-grey">'selector'</code>. Syntax for delegated events: <code class="highlight-grey">$().on('event', 'selector', handler)</code>.</p>
             </div>
           </div>
+        </div>
       </div>
     </section>
     <!-- change class section -->
@@ -100,14 +102,16 @@
         <h4>Task 3: adding and removing DOM nodes.</h4>
         <div>
           <p>A simple ToDo list (without saving entries feature)</p>
-          <div>
-            <div>
+          <div id="todolist-container">
+            <div id="todolist-input-container">
               <input type="text" name="newEntry" placeholder="Add new line here" id="new-entry" />
               <input type="submit" value="Add" id="add-entry-button" />
-              <ul id="list">
-                <li>test entry<span class="remove-entry">×</span></li>
-              </ul>
             </div>
+            <ul id="list">
+              <li>test entry<span class="remove-entry">×</span></li>
+              <li>test entry<span class="remove-entry">×</span></li>
+              <li>test entry<span class="remove-entry">×</span></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -144,12 +148,12 @@
         <p>Image gallery size is set relative to viewport. Photos have equal height and different width.</p>
         <p>Image gallery is responsive.</p>
         <p>Click on any image to open modal.</p>
-        <p>Images under CC0 license.</p>
+        <p>Images are under CC0 license.</p>
         <div id="modal" class="modal-hidden">
           <div id="container__btn-close-modal"><span id="btn-close-modal">×</span></div>
           <div id="modal-image-container">
             <div id="modal-arrow-backwards">&lt;</div>
-            <div id="modal-image">
+            <div id="modal-image">         
               <img src="assets/wolf-62898_640.jpg" alt="wolf" class="image-active" id="first-image">
               <img src="assets/hedgehog-3703244_640.jpg" alt="hedgehog">
               <img src="assets/jay-548381_640.jpg" alt="bird">
@@ -208,7 +212,7 @@
         <h4>Task 7: slideshow image gallery.</h4>
         <p>Image gallery has fixed size. Photos have equal height and width.</p>
         <p>Image gallery and images are responsive.</p>
-        <p>Images under CC0 license.</p>
+        <p>Images are under CC0 license.</p>
         <div id="slideshow">
           <div id="slideshow__main-image">
             <img src="assets/bird-1045954_640 resized.jpg" alt="" id="main-image" />

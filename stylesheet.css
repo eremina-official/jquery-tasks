@@ -254,7 +254,7 @@ h1 {
 
 /* grid */
 #grid-container {
-  /* for IE */
+  /* for IE. Grid is not supported in IE */
   display: -ms-grid;
   -ms-grid-columns: 150px 150px 150px 150px 150px 150px;
   

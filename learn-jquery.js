@@ -3,7 +3,9 @@ $(document).ready(function() {
   console.log('ready');
 
 //toggle answers
-  /* const toggleAnswersObj = {
+  /* This variant of toggleAnswers applies object literal design pattern
+  
+  const toggleAnswersObj = {
     
     cacheDom: function() {
       this.$document = $(document);
@@ -203,7 +205,8 @@ const modal = (function() {
   }
   function findWidth() {
     for (let i = 0; i < $imageGalleryItems.length; i++) {
-      /*$imageGalleryItem[i] is not a jQuery object but a DOM element, therefore we have to wrap it as jQuery object to be able to call width() */
+      /*$imageGalleryItem[i] is not a jQuery object but a DOM element, 
+      therefore we have to wrap it as jQuery object to be able to call width() */
       $imageGalleryFullWidth = $imageGalleryFullWidth + $($imageGalleryItems[i]).width();
     }
     let $imageGalleryWidth = $imageGalleryFullWidth - $('#img-gallery-container').width();
